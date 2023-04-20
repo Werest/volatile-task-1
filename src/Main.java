@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -29,7 +28,7 @@ public class Main {
         // Сгенерированное слово состоит из одной и той же буквы, например, aaa;
         Runnable task2 = () -> {
             for (String text : texts) {
-                if(isIdenticalLetters(text)){
+                if (isIdenticalLetters(text)) {
                     counterLetters(text.length());
                 }
             }
@@ -39,7 +38,7 @@ public class Main {
         // сначала все a (при наличии), затем все b (при наличии), затем все c и т. д. Например, aaccc.
         Runnable task3 = () -> {
             for (String text : texts) {
-                if(isIncreasingLetters(text) && !isIdenticalLetters(text)) {
+                if (isIncreasingLetters(text) && !isIdenticalLetters(text)) {
                     counterLetters(text.length());
                 }
             }
